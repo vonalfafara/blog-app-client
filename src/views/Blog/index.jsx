@@ -151,21 +151,23 @@ const index = () => {
           {loggedIn && (
             <Row>
               <Col sm={1} className="pt-2">
-                <img
-                  style={{
-                    height: "40px",
-                    width: "40px",
-                    borderRadius: "100%",
-                    objectFit: "cover",
-                    cursor: "pointer",
-                    display: "block",
-                    marginLeft: "auto",
-                  }}
-                  src={`${import.meta.env.VITE_API}/image/${
-                    loggedIn.profile_picture
-                  }`}
-                  alt=""
-                />
+                {loggedIn.profile_picture && (
+                  <img
+                    style={{
+                      height: "40px",
+                      width: "40px",
+                      borderRadius: "100%",
+                      objectFit: "cover",
+                      cursor: "pointer",
+                      display: "block",
+                      marginLeft: "auto",
+                    }}
+                    src={`${import.meta.env.VITE_API}/image/${
+                      loggedIn.profile_picture
+                    }`}
+                    alt=""
+                  />
+                )}
               </Col>
               <Col sm={6}>
                 <Card className="mb-4">
@@ -202,21 +204,23 @@ const index = () => {
               return (
                 <Row key={index}>
                   <Col sm={1} className="pt-2">
-                    <img
-                      style={{
-                        height: "40px",
-                        width: "40px",
-                        borderRadius: "100%",
-                        objectFit: "cover",
-                        cursor: "pointer",
-                        display: "block",
-                        marginLeft: "auto",
-                      }}
-                      src={`${import.meta.env.VITE_API}/image/${
-                        comment.user.profile_picture
-                      }`}
-                      alt=""
-                    />
+                    {comment.user.profile_picture && (
+                      <img
+                        style={{
+                          height: "40px",
+                          width: "40px",
+                          borderRadius: "100%",
+                          objectFit: "cover",
+                          cursor: "pointer",
+                          display: "block",
+                          marginLeft: "auto",
+                        }}
+                        src={`${import.meta.env.VITE_API}/image/${
+                          comment.user.profile_picture
+                        }`}
+                        alt=""
+                      />
+                    )}
                   </Col>
                   <Col sm={6}>
                     <Card className="mb-4">
