@@ -47,6 +47,7 @@ const index = () => {
                     new Date(blog.created_at),
                     "MMMM dd, yyyy"
                   )}
+                  noOfComments={blog.comments}
                   subtitle={blog.subtitle}
                 />
               </Col>
