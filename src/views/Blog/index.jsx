@@ -236,7 +236,7 @@ const index = () => {
                               )}
                             </span>
                           </p>
-                          {loggedIn.id === comment.user.id && (
+                          {loggedIn?.id === comment.user?.id && (
                             <Button
                               size="sm"
                               variant="warning"
